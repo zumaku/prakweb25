@@ -1,7 +1,9 @@
 <?php
 
-    // echo $_GET[""]
-    // echo $_POST[""]
+    // echo $_GET["nama"];
+    // echo $_GET["nim"];
+    // echo $_GET["kelas"];
+    // echo $_GET["jk"];
 
 ?>
 
@@ -17,19 +19,27 @@
     <table border="1">
         <tr>
             <td>Nama:</td>
-            <td>GANTI TEKS INI</td>
+            <td>
+                <?php echo $_POST["nama"] ?>
+            </td>
         </tr>
         <tr>
             <td>Nin:</td>
-            <td>GANTI TEKS INI</td>
+            <td>
+                <?php echo $_POST["nim"] ?>
+            </td>
         </tr>
         <tr>
             <td>Kelas:</td>
-            <td>GANTI TEKS INI</td>
+            <td>
+                <?php echo $_POST["kelas"] ?>
+            </td>
         </tr>
         <tr>
             <td>Jenis Kelamin:</td>
-            <td>GANTI TEKS INI</td>
+            <td>
+                <?php echo $_POST["jk"] ?>
+            </td>
         </tr>
     </table>
 

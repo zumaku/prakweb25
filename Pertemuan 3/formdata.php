@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Input Data Mahasiswa</h1>
-    <form action="tabledata.php" method="post">
+    <form action="tabledata.php" method="post" enctype="">
         <label for="nama">Nama</label>
         <input type="text" id="nama" name="nama"><br>
         
