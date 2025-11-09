@@ -1,15 +1,38 @@
 <?php
 include 'db.php';
 
-$id = (int) $_GET['id'];
+// Ambil data id
 
-// Ambil data mahasiswa
-$q_mhs = mysqli_query($conn, "SELECT * FROM mahasiswa WHERE id=$id");
-$mahasiswa = mysqli_fetch_assoc($q_mhs);
+// Ambil data mahasiswa menggunakan id
+$mahasiswa = [
+    'id' => 1,
+    'nim' => '230101001',
+    'nama' => 'Daeng Baso',
+    'asal_daerah' => 'Bulukumba',
+    'jurusan' => 'Teknik Informatika',
+    'angkatan' => 2024,
+    'foto' => 'https://randomuser.me/api/portraits/men/21.jpg'
+];
 
-// Ambil nilai mahasiswa
-$q_nilai = mysqli_query($conn, "SELECT * FROM nilai_mahasiswa WHERE mahasiswa_id=$id ORDER BY semester ASC");
-$nilai = mysqli_fetch_all($q_nilai, MYSQLI_ASSOC);
+// Ambil nilai mahasiswa menggunakan id
+$nilai = [
+    [
+        'id' => 1,
+        'nim' => '230101001',
+        'mata_kuliah' => 'Pemrograman Web',
+        'semester' => 1,
+        'nilai_angka' => 88,
+        'nilai_huruf' => 'A'
+    ],
+    [
+        'id' => 2,
+        'nim' => '230101002',
+        'mata_kuliah' => 'Basis Data',
+        'semester' => 1,
+        'nilai_angka' => 79,
+        'nilai_huruf' => 'B+'
+    ]
+];
 ?>
 
 <!DOCTYPE html>

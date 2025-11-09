@@ -1,9 +1,40 @@
 <?php
-include 'db.php';
+// Import file db
 
-// Ambil semua data mahasiswa
-$result = mysqli_query($conn, "SELECT * FROM mahasiswa ORDER BY id DESC");
-$mahasiswa = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+// Ambil data
+
+
+// Extrak data
+$mahasiswa = [
+    [
+        'id' => 1,
+        'nim' => '230101001',
+        'nama' => 'Daeng Baso',
+        'asal_daerah' => 'Bulukumba',
+        'jurusan' => 'Teknik Informatika',
+        'angkatan' => 2024,
+        'foto' => 'https://randomuser.me/api/portraits/men/21.jpg'
+    ],
+    [
+        'id' => 2,
+        'nim' => '230101002',
+        'nama' => 'Salsabila Rahma',
+        'asal_daerah' => 'Makassar',
+        'jurusan' => 'Sistem Informasi',
+        'angkatan' => 2023,
+        'foto' => 'https://randomuser.me/api/portraits/women/22.jpg'
+    ],
+    [
+        'id' => 3,
+        'nim' => '230101003',
+        'nama' => 'Andi Pratama',
+        'asal_daerah' => 'Bone',
+        'jurusan' => 'Teknik Komputer',
+        'angkatan' => 2022,
+        'foto' => 'https://randomuser.me/api/portraits/men/23.jpg'
+    ]
+]
 ?>
 
 <!DOCTYPE html>

@@ -1,20 +1,17 @@
 <?php
-include 'db.php';
+// Import file db
 
+
+// Ambil data yang dikirim
 if (isset($_POST['simpan'])) {
-    $nim = $_POST['nim'];
-    $nama = $_POST['nama'];
-    $jurusan = $_POST['asal_daerah'];
-    $jurusan = $_POST['jurusan'];
-    $angkatan = $_POST['angkatan'];
-    $foto = $_POST['foto'];
+    // AMbil data menggunakan POST
 
-    $query = "INSERT INTO mahasiswa (nim, nama, jurusan, angkatan, foto)
-              VALUES ('$nim', '$nama',, '$asal_daerah', '$jurusan', '$angkatan', '$foto')";
-    mysqli_query($conn, $query);
 
-    header("Location: index.php");
-    exit;
+    // Masukkan ke dalam database
+    
+
+    // Redirect ke halaman utama
+    
 }
 ?>
 
@@ -44,7 +41,7 @@ if (isset($_POST['simpan'])) {
     <label>URL Foto:</label><br>
     <input type="text" name="foto"><br><br>
 
-    <input type="submit" name="simpan" value="Simpan">
+    <button type="submit" name="simpan">Simpan</button>
   </form>
 
   <br>
