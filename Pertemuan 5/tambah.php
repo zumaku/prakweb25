@@ -4,12 +4,13 @@ include 'db.php';
 if (isset($_POST['simpan'])) {
     $nim = $_POST['nim'];
     $nama = $_POST['nama'];
+    $jurusan = $_POST['asal_daerah'];
     $jurusan = $_POST['jurusan'];
     $angkatan = $_POST['angkatan'];
     $foto = $_POST['foto'];
 
     $query = "INSERT INTO mahasiswa (nim, nama, jurusan, angkatan, foto)
-              VALUES ('$nim', '$nama', '$jurusan', '$angkatan', '$foto')";
+              VALUES ('$nim', '$nama',, '$asal_daerah', '$jurusan', '$angkatan', '$foto')";
     mysqli_query($conn, $query);
 
     header("Location: index.php");
@@ -30,6 +31,9 @@ if (isset($_POST['simpan'])) {
 
     <label>Nama:</label><br>
     <input type="text" name="nama" required><br><br>
+    
+    <label>Asal Daerah</label><br>
+    <input type="text" name="asal_daerah" required><br><br>
 
     <label>Jurusan:</label><br>
     <input type="text" name="jurusan" required><br><br>

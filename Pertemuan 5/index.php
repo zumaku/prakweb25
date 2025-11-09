@@ -22,6 +22,7 @@ $mahasiswa = mysqli_fetch_all($result, MYSQLI_ASSOC);
       <th>Foto</th>
       <th>NIM</th>
       <th>Nama</th>
+      <th>Asal</th>
       <th>Jurusan</th>
       <th>Angkatan</th>
       <th>Aksi</th>
@@ -34,6 +35,7 @@ $mahasiswa = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <td><img src="<?= $mhs['foto'] ?>" width="50" height="50"></td>
         <td><?= $mhs['nim'] ?></td>
         <td><?= $mhs['nama'] ?></td>
+        <td><?= $mhs['asal_daerah'] ?></td>
         <td><?= $mhs['jurusan'] ?></td>
         <td><?= $mhs['angkatan'] ?></td>
         <td>

@@ -24,6 +24,7 @@ $nilai = mysqli_fetch_all($q_nilai, MYSQLI_ASSOC);
     <img src="<?= $mahasiswa['foto'] ?>" width="100" height="100"><br><br>
     <b>NIM:</b> <?= $mahasiswa['nim'] ?><br>
     <b>Nama:</b> <?= $mahasiswa['nama'] ?><br>
+    <b>Asal Daerah:</b> <?= $mahasiswa['asal_daerah'] ?><br>
     <b>Jurusan:</b> <?= $mahasiswa['jurusan'] ?><br>
     <b>Angkatan:</b> <?= $mahasiswa['angkatan'] ?><br><br>
 

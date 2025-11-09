@@ -12,6 +12,7 @@ if (!$data) {
 if (isset($_POST['update'])) {
     $nim = $_POST['nim'];
     $nama = $_POST['nama'];
+    $nama = $_POST['asal_daerah'];
     $jurusan = $_POST['jurusan'];
     $angkatan = $_POST['angkatan'];
     $foto = $_POST['foto'];
@@ -41,6 +42,9 @@ if (isset($_POST['update'])) {
 
     <label>Nama:</label><br>
     <input type="text" name="nama" value="<?= $data['nama'] ?>" required><br><br>
+
+    <label>Asal Daerah:</label><br>
+    <input type="text" name="jurusan" value="<?= $data['asal_daerah'] ?>" required><br><br>
 
     <label>Jurusan:</label><br>
     <input type="text" name="jurusan" value="<?= $data['jurusan'] ?>" required><br><br>
