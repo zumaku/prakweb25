@@ -5,13 +5,13 @@
 // Ambil data yang dikirim
 if (isset($_POST['simpan'])) {
     // AMbil data menggunakan POST
-
+    
 
     // Masukkan ke dalam database
     
 
     // Redirect ke halaman utama
-    
+
 }
 ?>
 

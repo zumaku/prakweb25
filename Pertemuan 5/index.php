@@ -6,6 +6,9 @@
 
 
 // Extrak data
+// Menggunakan mysqli_fetch_assoc($data) untuk one dimentional data
+// Menggunakan mysqli_fetch_all($data, MYSQLI_ASSOC); untuk mutidimensional data
+
 $mahasiswa = [
     [
         'id' => 1,

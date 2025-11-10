@@ -1,9 +1,13 @@
 <?php
-include 'db.php';
+// Import file db
+
 
 // Ambil data id
 
+
 // Ambil data mahasiswa menggunakan id
+
+
 $mahasiswa = [
     'id' => 1,
     'nim' => '230101001',
@@ -15,6 +19,8 @@ $mahasiswa = [
 ];
 
 // Ambil nilai mahasiswa menggunakan id
+
+
 $nilai = [
     [
         'id' => 1,

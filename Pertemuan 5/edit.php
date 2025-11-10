@@ -1,30 +1,23 @@
 <?php
-include 'db.php';
+// Import file db
 
-$id = (int) $_GET['id'];
-$result = mysqli_query($conn, "SELECT * FROM mahasiswa WHERE id=$id");
-$data = mysqli_fetch_assoc($result);
+// Ambil data id
 
-if (!$data) {
-    die("Data tidak ditemukan!");
-}
+// Ambil data
+
+// Extrak data
+
 
 if (isset($_POST['update'])) {
-    $nim = $_POST['nim'];
-    $nama = $_POST['nama'];
-    $nama = $_POST['asal_daerah'];
-    $jurusan = $_POST['jurusan'];
-    $angkatan = $_POST['angkatan'];
-    $foto = $_POST['foto'];
+    // AMbil data menggunakan POST
+    
 
-    $query = "UPDATE mahasiswa SET 
-                nim='$nim', nama='$nama', jurusan='$jurusan', 
-                angkatan='$angkatan', foto='$foto' 
-              WHERE id=$id";
-    mysqli_query($conn, $query);
+    // Update data di dalam database
+    
 
-    header("Location: index.php");
-    exit;
+    // Redirect ke halaman utama
+    
+
 }
 ?>
 
@@ -38,22 +31,22 @@ if (isset($_POST['update'])) {
 
   <form method="post">
     <label>NIM:</label><br>
-    <input type="text" name="nim" value="<?= $data['nim'] ?>" required><br><br>
+    <input type="text" name="nim" value="Ganti Nim nya" required><br><br>
 
     <label>Nama:</label><br>
-    <input type="text" name="nama" value="<?= $data['nama'] ?>" required><br><br>
+    <input type="text" name="nama" value="Ganti Namanya" required><br><br>
 
     <label>Asal Daerah:</label><br>
-    <input type="text" name="jurusan" value="<?= $data['asal_daerah'] ?>" required><br><br>
+    <input type="text" name="jurusan" value="Ganti Asalnya" required><br><br>
 
     <label>Jurusan:</label><br>
-    <input type="text" name="jurusan" value="<?= $data['jurusan'] ?>" required><br><br>
+    <input type="text" name="jurusan" value="Ganti Jurusannya" required><br><br>
 
     <label>Angkatan:</label><br>
-    <input type="number" name="angkatan" value="<?= $data['angkatan'] ?>" required><br><br>
+    <input type="number" name="angkatan" value="Ganti Angkatannya" required><br><br>
 
     <label>URL Foto:</label><br>
-    <input type="text" name="foto" value="<?= $data['foto'] ?>"><br><br>
+    <input type="text" name="foto" value="Ganti URL Fotonya"><br><br>
 
     <input type="submit" name="update" value="Update">
   </form>
