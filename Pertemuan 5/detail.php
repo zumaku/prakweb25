@@ -9,16 +9,16 @@ $id = $_GET["id"];
 $query = "SELECT * FROM mahasiswa WHERE id = $id";
 $hasil = mysqli_query($conn, $query);
 
-// Ekstrak Data
+// Ekstrak data
 $mahasiswa = mysqli_fetch_assoc($hasil);
 
 
 // Ambil nilai mahasiswa menggunakan id
-$query2 = "SELECT * FROM nilai_mahasiswa WHERE id = $id";
-$hasil2 = mysqli_query($conn, $query2);
+$queryNilai = "SELECT * FROM nilai_mahasiswa WHERE mahasiswa_id = $id";
+$hasilNilai = mysqli_query($conn, $queryNilai);
 
-// Ekstrak Data
-$nilai = mysqli_fetch_all($hasil2, MYSQLI_ASSOC);
+// Ekstrak Data Nilai
+$nilai = mysqli_fetch_all($hasilNilai, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
