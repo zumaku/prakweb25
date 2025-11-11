@@ -1,44 +1,24 @@
 <?php
 // Import file db
-
+include "db.php";
 
 // Ambil data id
-
+$id = $_GET["id"];
 
 // Ambil data mahasiswa menggunakan id
+$query = "SELECT * FROM mahasiswa WHERE id = $id";
+$hasil = mysqli_query($conn, $query);
 
+// Ekstrak Data
+$mahasiswa = mysqli_fetch_assoc($hasil);
 
-$mahasiswa = [
-    'id' => 1,
-    'nim' => '230101001',
-    'nama' => 'Daeng Baso',
-    'asal_daerah' => 'Bulukumba',
-    'jurusan' => 'Teknik Informatika',
-    'angkatan' => 2024,
-    'foto' => 'https://randomuser.me/api/portraits/men/21.jpg'
-];
 
 // Ambil nilai mahasiswa menggunakan id
+$query2 = "SELECT * FROM nilai_mahasiswa WHERE id = $id";
+$hasil2 = mysqli_query($conn, $query2);
 
-
-$nilai = [
-    [
-        'id' => 1,
-        'nim' => '230101001',
-        'mata_kuliah' => 'Pemrograman Web',
-        'semester' => 1,
-        'nilai_angka' => 88,
-        'nilai_huruf' => 'A'
-    ],
-    [
-        'id' => 2,
-        'nim' => '230101002',
-        'mata_kuliah' => 'Basis Data',
-        'semester' => 1,
-        'nilai_angka' => 79,
-        'nilai_huruf' => 'B+'
-    ]
-];
+// Ekstrak Data
+$nilai = mysqli_fetch_all($hasil2, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>

@@ -1,8 +1,8 @@
 <?php
-$host = "";
-$user = "";
+$host = "localhost";
+$user = "root";
 $pass = "";
-$db   = "";
+$db   = "db_mahasiswa";
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 

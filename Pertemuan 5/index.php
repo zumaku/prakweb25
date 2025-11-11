@@ -1,43 +1,16 @@
 <?php
 // Import file db
-
+include "db.php";
 
 // Ambil data
-
+$query = "SELECT * FROM mahasiswa";
+$hasil = mysqli_query($conn, $query);
 
 // Extrak data
 // Menggunakan mysqli_fetch_assoc($data) untuk one dimentional data
 // Menggunakan mysqli_fetch_all($data, MYSQLI_ASSOC); untuk mutidimensional data
 
-$mahasiswa = [
-    [
-        'id' => 1,
-        'nim' => '230101001',
-        'nama' => 'Daeng Baso',
-        'asal_daerah' => 'Bulukumba',
-        'jurusan' => 'Teknik Informatika',
-        'angkatan' => 2024,
-        'foto' => 'https://randomuser.me/api/portraits/men/21.jpg'
-    ],
-    [
-        'id' => 2,
-        'nim' => '230101002',
-        'nama' => 'Salsabila Rahma',
-        'asal_daerah' => 'Makassar',
-        'jurusan' => 'Sistem Informasi',
-        'angkatan' => 2023,
-        'foto' => 'https://randomuser.me/api/portraits/women/22.jpg'
-    ],
-    [
-        'id' => 3,
-        'nim' => '230101003',
-        'nama' => 'Andi Pratama',
-        'asal_daerah' => 'Bone',
-        'jurusan' => 'Teknik Komputer',
-        'angkatan' => 2022,
-        'foto' => 'https://randomuser.me/api/portraits/men/23.jpg'
-    ]
-]
+$mahasiswa = mysqli_fetch_all($hasil, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>

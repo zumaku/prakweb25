@@ -1,17 +1,27 @@
 <?php
 // Import file db
-
+include "db.php";
 
 // Ambil data yang dikirim
 if (isset($_POST['simpan'])) {
-    // AMbil data menggunakan POST
-    
+    // Ambil data menggunakan POST
+    $nim = $_POST["nim"];
+    $nama = $_POST["nama"];
+    $asal_daerah = $_POST["asal_daerah"];
+    $jurusan = $_POST["jurusan"];
+    $angkatan = $_POST["angkatan"];
+    $foto = $_POST["foto"];
 
     // Masukkan ke dalam database
-    
+    $query = "INSERT INTO mahasiswa 
+      (nim, nama, asal_daerah, jurusan, angkatan, foto)
+      VALUES ($nim, '$nama', '$asal_daerah', '$jurusan', $angkatan, '$foto')
+    ";
+    $hasil = mysqli_query($conn, $query);
 
     // Redirect ke halaman utama
-
+    header("Location: index.php");
+    exit();
 }
 ?>
 
