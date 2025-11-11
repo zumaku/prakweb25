@@ -13,9 +13,9 @@ if (isset($_POST['simpan'])) {
     $foto = $_POST["foto"];
 
     // Masukkan ke dalam database
-    $query = "INSERT INTO mahasiswa 
+    $query = "INSERT INTO mahasiswa
       (nim, nama, asal_daerah, jurusan, angkatan, foto)
-      VALUES ($nim, '$nama', '$asal_daerah', '$jurusan', $angkatan, '$foto')
+      VALUES ('$nim', '$nama', '$asal_daerah', '$jurusan', $angkatan, '$foto')
     ";
     $hasil = mysqli_query($conn, $query);
 

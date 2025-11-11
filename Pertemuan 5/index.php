@@ -48,7 +48,7 @@ $mahasiswa = mysqli_fetch_all($hasil, MYSQLI_ASSOC);
         <td>
           <a href="detail.php?id=<?= $mhs['id'] ?>">Detail</a> |
           <a href="edit.php?id=<?= $mhs['id'] ?>">Edit</a> |
-          <a href="hapus.php?id=<?= $mhs['id'] ?>" onclick="return confirm('Hapus data ini?')">Hapus</a>
+          <a href="hapus.php?id=<?= $mhs['id'] ?>" onclick="return confirm('Yakin hapus data ini?')">Hapus</a>
         </td>
       </tr>
     <?php endforeach; ?>
