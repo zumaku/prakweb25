@@ -37,7 +37,7 @@ if (isset($_POST['update'])) {
     <input type="text" name="nama" value="Ganti Namanya" required><br><br>
 
     <label>Asal Daerah:</label><br>
-    <input type="text" name="jurusan" value="Ganti Asalnya" required><br><br>
+    <input type="text" name="asal_daerah" value="Ganti Asalnya" required><br><br>
 
     <label>Jurusan:</label><br>
     <input type="text" name="jurusan" value="Ganti Jurusannya" required><br><br>
