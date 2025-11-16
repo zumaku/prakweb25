@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Mahasiswa</title>
+
+  <style>
+    /* ===== FONT GLOBAL (element selector) ===== */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* ===== ID SELECTOR ===== */
+    #header {
+      background-image: url("https://picsum.photos/1200/300");
+      background-size: cover;
+      background-position: center;
+      padding: 60px 20px;
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    /* ===== CLASS SELECTOR ===== */
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: bold;
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      text-transform: capitalize;
+    }
+
+    /* TEXT STYLE */
+    .description {
+      text-align: justify;
+      letter-spacing: 0.5px;
+    }
+
+    /* PROFILE BOX */
+    .profile-box {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding: 20px;
+      background-color: #fafafa;
+      border-radius: 10px;
+    }
+
+    .profile-box img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ddd;
+    }
+
+    /* INLINE (SPAN) */
+    .label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* TABLE (BLOCK DISPLAY DEMO) */
+    .info-block {
+      margin-top: 10px;
+      background: #eef8ff;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    /* FOOTER */
+    #footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #555;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER with BACKGROUND IMAGE ===== -->
+  <header id="header">
+    Profil Mahasiswa
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="container">
+
+    <!-- PROFIL MAHASISWA -->
+    <div class="section-title">Data Mahasiswa</div>
+
+    <div class="profile-box">
+      <img src="https://picsum.photos/200" alt="Foto Mahasiswa">
+
+      <div>
+        <p><span class="label">Nama:</span> Budi Santoso</p>
+        <p><span class="label">NIM:</span> 231051234</p>
+        <p><span class="label">Program Studi:</span> Teknik Informatika</p>
+        <p><span class="label">Angkatan:</span> 2023</p>
+      </div>
+    </div>
+
+    <!-- BIOGRAFI -->
+    <div class="section-title">Tentang Mahasiswa</div>
+    <p class="description">
+      Budi adalah mahasiswa aktif yang memiliki minat pada bidang pengembangan web dan kecerdasan buatan.
+      Ia telah mengikuti berbagai kegiatan organisasi dan pernah menjadi asisten laboratorium pemrograman dasar.
+      Dengan sikap disiplin dan kemauan belajar yang tinggi, ia terus mengembangkan keterampilannya di bidang teknologi.
+    </p>
+
+    <!-- BLOK INFORMASI (DIV BLOCK) -->
+    <div class="section-title">Kemampuan</div>
+
+    <div class="info-block">
+      <p><span class="label">Bahasa Pemrograman:</span> HTML, CSS, JavaScript, Python</p>
+      <p><span class="label">Tools:</span> VSCode, GitHub, Figma</p>
+      <p><span class="label">Soft Skills:</span> Komunikasi, Kerja Tim, Manajemen Waktu</p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    &copy; 2025 Universitas Teknologi Nusantara
+  </footer>
+
+</body>
+</html>
