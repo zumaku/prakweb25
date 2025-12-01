@@ -1,34 +1,147 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contoh CSS Dasar Tanpa Box Model</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
 
-    <h1 id="judul" class="judul">Informasi Kelas Pemrograman</h1>
-    
-    <a href="#" class="menu-item">Home</a>
-    <a href="#" class="menu-item">Materi</a>
-    <a href="#" class="menu-item">Jadwal</a>
-    <a href="#" class="menu-item">Kontak</a>
+    <style>
+      /* 
+Selector Priority:
+- Tag Elemen    = 1
+- Class         = 10
+- Id            = 100
+*/
 
-    <h2 id="heading2">Deskripsi Kelas</h2>
+      /* h1 {
+    text-transform: uppercase;
+}
+
+.menu-item {
+    color: rgb(212, 17, 186);
+}
+
+h2#heading2 {
+    color: blue;
+}
+
+.heading2#heading2{
+    color: orange;
+} */
+
+      body {
+        color: white;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+
+        /* Background */
+        background-color: rgb(35, 35, 35);
+        background-image: url("images.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: linear-gradient(
+          to top,
+          rgb(97, 95, 0),
+          rgb(31, 31, 31)
+        );
+      }
+
+      h1 {
+        /* Font Style */
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        font-style: italic;
+
+        /* Text Style */
+        text-align: center;
+        text-decoration: underline;
+        text-transform: capitalize;
+        /* text-shadow: 10px 10px 10px red; */
+      }
+
+      div {
+        background-color: rgb(175, 167, 10);
+      }
+
+      div a {
+        text-decoration: none;
+        font-weight: 700;
+        color: black;
+      }
+
+      p span {
+        font-weight: 700;
+        background-color: yellow;
+        color: black;
+      }
+
+      p span#nama {
+        color: blue;
+      }
+
+      /* Display
+    - Inline
+    - Blok
+*/
+
+      h1#h1 {
+        background-color: red;
+      }
+
+      label {
+        background-color: blue;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="judul" class="judul">Informasi kelas pemrograman</h1>
+
+    <div>
+      <a href="#" class="menu-item">Home</a>
+      <a href="#" class="menu-item">Materi</a>
+      <a href="#" class="menu-item">Jadwal</a>
+      <a href="#" class="menu-item">Kontak</a>
+    </div>
+
+    <h2 id="heading2" class="heading2">Deskripsi Kelas</h2>
     <p>
-        Kelas ini membahas dasar-dasar HTML, CSS, dan JavaScript.
-        Cocok untuk pemula yang ingin memahami konsep dasar web development.
+      Kelas ini membahas dasar-dasar <span>HTML, CSS, dan JavaScript</span>.
+      Cocok untuk pemula yang ingin memahami konsep dasar web development.
     </p>
-    <p>
-        Materi tambahan dapat diakses pada <a href="#">halaman materi</a>.
-    </p>
+    <p>Materi tambahan dapat diakses pada <a href="#">halaman materi</a>.</p>
 
     <h2>Instruktur</h2>
     <p>
-        Kelas ini dibimbing oleh 
-        Zul Fadli, seorang pengembang web
-        yang senang mengajar konsep dasar pemrograman.
+      Kelas ini dibimbing oleh
+      <span id="nama">Zul Fadli</span>, seorang pengembang web yang senang
+      mengajar konsep dasar pemrograman.
     </p>
-</body>
+
+    <img src="images.jpg" alt="" />
+    <a href="">Link</a>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, numquam
+      enim omnis nulla officiis, ipsum voluptate deserunt ab ipsam pariatur quas
+      veritatis eveniet vitae quod debitis consectetur voluptates assumenda
+      itaque.
+    </p>
+
+    <h1 id="h1">Ini adalah H1 (block)</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nulla
+      voluptatem, quas neque sit autem. Facilis accusantium eveniet doloremque
+      velit omnis distinctio officia et ipsum, consequatur maxime dolore
+      suscipit cumque.
+    </p>
+
+    <label for="">Ini adalah labe (Inline)</label>
+    <input type="text" name="" id="" />
+
+    <br /><br /><br />
+  </body>
 </html>
