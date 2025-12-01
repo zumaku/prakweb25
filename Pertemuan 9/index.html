@@ -9,6 +9,39 @@
       padding: 12px;
       margin-bottom: 10px;
     }
+
+    /* ============================
+       STYLE OVERLAY
+       ============================ */
+    #overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.2s ease;
+    }
+
+    #overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      width: 250px;
+    }
+
+    .modal button {
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -26,15 +59,23 @@
   <button id="ubahTextBtn">Ubah innerText</button>
   <button id="ubahHtmlBtn">Ubah innerHTML</button>
   <button id="highlightBtn">Highlight semua .text</button>
+  <button id="showOverlayBtn">Tampilkan Overlay</button>
+
+  <!-- ============================
+       OVERLAY HTML
+       ============================ -->
+  <div id="overlay">
+    <div class="modal">
+      <h3>Ini Overlay!</h3>
+      <p>Contoh penggunaan querySelector + event.</p>
+      <button id="closeOverlayBtn">Tutup</button>
+    </div>
+  </div>
+
 
   <script>
     // ======================
     // Var, Let, & Const
-    // ======================
-
-
-    // ======================
-    // querySelector
     // ======================
 
 
@@ -44,7 +85,12 @@
 
 
     // ======================
-    // innerText & innerHTML
+    // Query Selector
+    // ======================
+
+
+    // ======================
+    // InnerText & InnerHTML
     // ======================
 
 
