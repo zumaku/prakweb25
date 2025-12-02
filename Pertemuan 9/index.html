@@ -10,43 +10,14 @@
       margin-bottom: 10px;
     }
 
-    /* ============================
-       STYLE OVERLAY
-       ============================ */
-    #overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      opacity: 0;
-      pointer-events: none;
-      transition: 0.2s ease;
-    }
-
-    #overlay.active {
-      opacity: 1;
-      pointer-events: all;
-    }
-
-    .modal {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      width: 250px;
-    }
-
-    .modal button {
-      margin-top: 10px;
-    }
+    /* .box p {
+      color: red;
+    } */
   </style>
 </head>
 <body>
 
-  <h1 id="judul">Hello World!</h1>
+  <h1 id="judul">Halo Dunia</h1>
 
   <div class="box" id="box1">
     <p class="text">Ini paragraf dalam box 1</p>
@@ -56,29 +27,13 @@
     <p class="text">Ini paragraf dalam box 2</p>
   </div>
 
-  <div class="box" id="box3">
-    <p class="text">Ini paragraf dalam box 3</p>
-  </div>
-
-  <button id="peringatan">Tampilkan Peringatan</button>
-  <button id="ubahTextBtn">Ubah innerText</button>
-  <button id="ubahHtmlBtn">Ubah innerHTML</button>
-  <button id="ubahBox3">Ubah Style</button>
-  <button id="showOverlayBtn">Tampilkan Overlay</button>
-
-  <!-- ============================
-       OVERLAY HTML
-       ============================ -->
-  <div id="overlay">
-    <div class="modal">
-      <h3>Ini Overlay!</h3>
-      <p>Contoh penggunaan querySelector + event.</p>
-      <button id="closeOverlayBtn">Tutup</button>
-    </div>
-  </div>
+  <button id="peringatan">Tampilkan di Console</button>
+  <button id="ubahTextBtn">Ubah Judul</button>
+  <button id="ubahHtmlBtn">Ubah Isi Box 1</button>
 
 
-  <script src="script.js"></script>
+  <!-- Script Tag Elemen di sini | Untuk menulis kode JavaScript -->
+  <script src="script.js" ></script>
 
 </body>
 </html>

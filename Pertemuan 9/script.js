@@ -1,121 +1,54 @@
-// ======================
-// Query Selector
-// ======================
+// External JavaScript
 
-// const h1 = document.querySelector("#judul")
-// console.log(h1)
+// Selector
+const heading1 = document.getElementById("judul")
+console.log(heading1)
 
-// const box = document.querySelector(".box")
-// console.log(box)
-
+const box = document.querySelector(".box")
+console.log(box)
 
 
-
-
-
-
-
-// ======================
 // Event
-// ======================
 
-const tombolPeringatan = document.querySelector("#peringatan")
-console.log(tombolPeringatan)
+// 1. Tangkap Elemen yg dibutuhkan
+const tampilkanBtn = document.getElementById("peringatan")
 
-// Lakukan Kejaidan
-// addEventListener( kejadian, aksi )
-
+// 2. Tambahkan event
 let angka = 0
-tombolPeringatan.addEventListener("click", () => {
-    console.log("Tombol Ditekan", angka+1)
-    angka+=1
+tampilkanBtn.addEventListener("click", () => {
+    console.log("Tombol diklik ", angka++)
 })
 
 
 
 
+// innerText & innerHTML
 
 
+// 1. Percobaan innerText
+// 1.1 Secelt Elemen yang dibutuhkan
+const judul = document.querySelector("#judul")
+const tombol1 = document.querySelector("#ubahTextBtn")
 
-
-
-
-
-
-
-
-// ======================
-// InnerText & InnerHTML
-// ======================
-
-
-// innerText
-const ubahText = document.querySelector("#ubahTextBtn")
-const h1 = document.querySelector("#judul")
-
-ubahText.addEventListener("click", () => {
-    h1.innerText = "Ini Materi JavaScript";
+// 1.2 Tambahkan Aksi/Event
+tombol1.addEventListener("click", ()=>{
+    // 1.3 Ubah Textnya
+    judul.innerText = "Hari Terakhir Praktikum."
 })
 
 
-// innerHTML
-const ubahHTML = document.querySelector("#ubahHtmlBtn")
+// 2. innerHTML
+
+// 2.1 Secelt Elemen yang dibutuhkan
 const box1 = document.querySelector("#box1")
+const tombol2 = document.querySelector("#ubahHtmlBtn")
 
-ubahHTML.addEventListener("click", () => {
-    console.log(box1.innerHTML)
+// 2.2 Tambahkan Aksi/Event
+tombol2.addEventListener("click", () => {
+    // 2.3 Ubah HTML-nya
     box1.innerHTML = `
-    <h3>Textnya Sudah Berubah📄</h3>
-    <a href="https://instagram.com/fadliinlov3" target="_blank" >Link IG ku</a>
+        <a href="https://instagram.com/fadliinlov3">Ini link IG</a>
+        <img src="images.jpg" />
     `
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const ubahStyle = document.querySelector("#ubahBox3")
-const box3 = document.querySelector("#box3")
-
-ubahStyle.addEventListener("click", () => {
-    box3.innerHTML = `
-    <h3>Nama Saya Zuma</h3>
-    <img src="images.jpg" />
-    `
-})
-
-
-
-
-
-
-
-
-
-
-
-// Manipulasi Class
-
-const overlayTombol = document.querySelector("#showOverlayBtn")
-const overlay = document.querySelector("#overlay")
-const tutupTombol = document.querySelector("#closeOverlayBtn")
-
-overlayTombol.addEventListener("click", () => {
-    overlay.classList.add("active")
-})
-
-tutupTombol.addEventListener("click", () => {
-    overlay.classList.remove("active")
-})
